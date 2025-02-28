@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7ejmch6jrtk8"]
+
+[ext_resource type="PackedScene" uid="uid://b0crl3lg8hw61" path="res://Entities/UI/Background/Background.tscn" id="1_akra8"]
+[ext_resource type="PackedScene" uid="uid://bnuiewi11o8ba" path="res://Entities/UI/CookiePanel/cookie_panel.tscn" id="2_8tdwd"]
+
+[node name="Ui" type="CanvasLayer"]
+
+[node name="Background" parent="." instance=ExtResource("1_akra8")]
+
+[node name="CookiePanel" parent="." instance=ExtResource("2_8tdwd")]
