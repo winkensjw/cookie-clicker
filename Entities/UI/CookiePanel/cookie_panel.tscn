@@ -1,21 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://bnuiewi11o8ba"]
 
+[ext_resource type="StyleBox" uid="uid://dstnxm2dm80p7" path="res://Entities/UI/Styles/ui_border_style.tres" id="1_bh3kq"]
 [ext_resource type="Texture2D" uid="uid://bloq2ywk01u8x" path="res://Entities/UI/CookiePanel/Art/Cookie.png" id="1_ehloj"]
 [ext_resource type="Script" path="res://Entities/UI/CookiePanel/cookie_panel.gd" id="1_v6aw2"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d5gwv"]
-draw_center = false
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0.533333, 0.294118, 0.168627, 1)
 
 [node name="CookiePanel" type="PanelContainer"]
 custom_minimum_size = Vector2(426, 720)
 offset_right = 426.0
 offset_bottom = 720.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_d5gwv")
+theme_override_styles/panel = ExtResource("1_bh3kq")
 script = ExtResource("1_v6aw2")
 
 [node name="CookiePanelVBox" type="VBoxContainer" parent="."]

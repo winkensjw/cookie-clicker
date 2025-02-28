@@ -1,0 +1,85 @@
+[gd_scene load_steps=7 format=3 uid="uid://cki7cb05syyuq"]
+
+[ext_resource type="Script" path="res://Entities/UI/ShopPanel/ShopItemPanel/shop_item_panel.gd" id="1_xy0yr"]
+[ext_resource type="Texture2D" uid="uid://bloq2ywk01u8x" path="res://Entities/UI/CookiePanel/Art/Cookie.png" id="2_oujjp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1pwvf"]
+bg_color = Color(0.458405, 0.458405, 0.458405, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.306923, 0.306923, 0.306922, 1)
+border_blend = true
+
+[sub_resource type="LabelSettings" id="LabelSettings_r7bwl"]
+font_size = 32
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 0.313726)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fab6r"]
+font_color = Color(1, 0.0862745, 0.0941176, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 0.313726)
+
+[sub_resource type="LabelSettings" id="LabelSettings_i2dte"]
+font_size = 32
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 0.313726)
+
+[node name="ShopItemPanel" type="PanelContainer"]
+custom_minimum_size = Vector2(328, 64)
+theme_override_styles/panel = SubResource("StyleBoxFlat_1pwvf")
+script = ExtResource("1_xy0yr")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+texture = ExtResource("2_oujjp")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Container" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="HBoxContainer/Container"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+text = "Cursor"
+label_settings = SubResource("LabelSettings_r7bwl")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Container"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Container/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 4
+
+[node name="CostIcon" type="TextureRect" parent="HBoxContainer/Container/HBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture = ExtResource("2_oujjp")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="CostLabel" type="Label" parent="HBoxContainer/Container/HBoxContainer"]
+layout_mode = 2
+text = "123"
+label_settings = SubResource("LabelSettings_fab6r")
+
+[node name="Spacer" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CountLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_i2dte")
+
+[node name="Spacer2" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
