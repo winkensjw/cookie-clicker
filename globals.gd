@@ -1,9 +1,15 @@
 extends Node
 
-var fixture_value = 0
+var cookie_count : float = 0.0
+var cookies_per_click: float = 1.0
+var cookies_per_second : float = 0.0
 
 func _ready() -> void:
 	load_data()
+	
+func _notification(what):
+	if what == NOTIFICATION_WM_CLOSE_REQUEST:
+		save_data()
 
 func save_data() -> void:
 	SaveManager.save_data(_export_data())
@@ -13,10 +19,10 @@ func load_data() -> void:
 
 func _export_data() -> Dictionary:
 	return {
-		"fixture_property": fixture_value
+		"cookie_count": cookie_count
 	}
 	
 func _import_data(data : Dictionary) -> void:
 	if data.is_empty():
 		return
-	fixture_value = data["fixture_property"]
+	cookie_count = data["cookie_count"]
