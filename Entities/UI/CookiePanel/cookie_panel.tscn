@@ -12,7 +12,7 @@ border_width_bottom = 5
 border_color = Color(0.533333, 0.294118, 0.168627, 1)
 
 [node name="CookiePanel" type="PanelContainer"]
-custom_minimum_size = Vector2(0, 64)
+custom_minimum_size = Vector2(426, 720)
 offset_right = 426.0
 offset_bottom = 720.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_d5gwv")
