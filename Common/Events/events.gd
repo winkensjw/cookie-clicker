@@ -17,3 +17,4 @@ signal cookie_clicked
 
 # Shop Panel
 signal item_bought(item_name : String)
+signal upgrade_bought

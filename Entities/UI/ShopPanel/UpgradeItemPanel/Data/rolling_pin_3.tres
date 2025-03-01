@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="UpgradeItemResource" load_steps=3 format=3 uid="uid://ow1sh4atyif7"]
+
+[ext_resource type="Texture2D" uid="uid://buv0fxk3t13gf" path="res://Entities/UI/ShopPanel/UpgradeItemPanel/Art/rolling_pin.png" id="1_40qxd"]
+[ext_resource type="Script" path="res://Entities/UI/ShopPanel/UpgradeItemPanel/Data/upgrade_item_resource.gd" id="2_1cwwu"]
+
+[resource]
+script = ExtResource("2_1cwwu")
+upgrade_name = "Lubricated dentures "
+icon_texture = ExtResource("1_40qxd")
+cost = 50000
+multiplier = 1.0

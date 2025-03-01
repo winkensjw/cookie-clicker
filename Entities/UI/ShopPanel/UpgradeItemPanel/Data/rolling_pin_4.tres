@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="UpgradeItemResource" load_steps=3 format=3 uid="uid://c0s2q328koel0"]
+
+[ext_resource type="Texture2D" uid="uid://buv0fxk3t13gf" path="res://Entities/UI/ShopPanel/UpgradeItemPanel/Art/rolling_pin.png" id="1_3kqdu"]
+[ext_resource type="Script" path="res://Entities/UI/ShopPanel/UpgradeItemPanel/Data/upgrade_item_resource.gd" id="1_66ug4"]
+
+[resource]
+script = ExtResource("1_66ug4")
+upgrade_name = "Prune juice "
+icon_texture = ExtResource("1_3kqdu")
+cost = 5000000
+multiplier = 1.0

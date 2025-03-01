@@ -4,8 +4,9 @@ var cookie_count : float = 0.0
 var cookies_per_click: float = 1.0
 var cookies_per_second : float = 0.0
 var last_save_unix_time : float = 0
-
+var multiplier: float = 1.0
 var item_count: Dictionary = {}
+var bought_upgrades: Array = []
 
 func _ready() -> void:
 	load_data()
@@ -24,7 +25,8 @@ func _export_data() -> Dictionary:
 	return {
 		"cookie_count": cookie_count,
 		"last_save_unix_time": Time.get_unix_time_from_system(),
-		"item_count": item_count
+		"item_count": item_count,
+		"bought_upgrades": bought_upgrades
 	}
 	
 func _import_data(data : Dictionary) -> void:
@@ -33,7 +35,13 @@ func _import_data(data : Dictionary) -> void:
 	cookie_count = data.get("cookie_count",0.0)
 	last_save_unix_time = data.get("last_save_unix_time",0.0)
 	item_count = data.get("item_count", {})
+	bought_upgrades = data.get("bought_upgrades", [])
 
 func increase_item_count(item_name:String, value:int=1):
 	var new_count = item_count.get(item_name, 0) + value
 	item_count[item_name] = new_count
+
+func upgrade_bought(upgrade_name : String, value : float):
+	if not bought_upgrades.has(upgrade_name):
+		bought_upgrades.append(upgrade_name)
+	multiplier += value

@@ -17,7 +17,6 @@ var item_name
 var cost
 var count
 var current_state
-
 var is_updating : bool = false
 
 @onready var icon : TextureRect = $HBoxContainer/Icon
