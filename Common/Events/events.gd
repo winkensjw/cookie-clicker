@@ -14,3 +14,6 @@ signal main_menu_closed
 
 # Cookie Panel
 signal cookie_clicked
+
+# Shop Panel
+signal item_bought(item_name : String)

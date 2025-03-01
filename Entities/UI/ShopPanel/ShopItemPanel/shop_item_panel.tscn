@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cki7cb05syyuq"]
+[gd_scene load_steps=6 format=3 uid="uid://cki7cb05syyuq"]
 
 [ext_resource type="Script" path="res://Entities/UI/ShopPanel/ShopItemPanel/shop_item_panel.gd" id="1_xy0yr"]
 [ext_resource type="Texture2D" uid="uid://bloq2ywk01u8x" path="res://Entities/UI/CookiePanel/Art/Cookie.png" id="2_oujjp"]
@@ -14,11 +14,6 @@ border_blend = true
 
 [sub_resource type="LabelSettings" id="LabelSettings_r7bwl"]
 font_size = 32
-shadow_size = 5
-shadow_color = Color(0, 0, 0, 0.313726)
-
-[sub_resource type="LabelSettings" id="LabelSettings_fab6r"]
-font_color = Color(1, 0.0862745, 0.0941176, 1)
 shadow_size = 5
 shadow_color = Color(0, 0, 0, 0.313726)
 
@@ -67,8 +62,10 @@ stretch_mode = 4
 
 [node name="CostLabel" type="Label" parent="HBoxContainer/Container/HBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.313726)
+theme_override_font_sizes/font_size = 16
 text = "123"
-label_settings = SubResource("LabelSettings_fab6r")
 
 [node name="Spacer" type="Control" parent="HBoxContainer"]
 layout_mode = 2
@@ -83,3 +80,10 @@ label_settings = SubResource("LabelSettings_i2dte")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.2
+
+[node name="ShopItemPanelButton" type="Button" parent="."]
+layout_mode = 2
+flat = true
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="pressed" from="ShopItemPanelButton" to="." method="_on_shop_item_panel_button_pressed"]

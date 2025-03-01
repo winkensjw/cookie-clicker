@@ -16,10 +16,8 @@ func _process(delta: float) -> void:
 	_animate_rotate_cookie(delta)
 
 func _update_labels() -> void:
-	# FIXME number formatting
 	_cookie_label.text = str(int(Globals.cookie_count)) + " Cookies"
 	_cookies_per_second_label.text = "per second: " + str(Globals.cookies_per_second)
-	
 
 func _on_cookie_button_pressed() -> void:
 	_animate_cookie_clicked()
