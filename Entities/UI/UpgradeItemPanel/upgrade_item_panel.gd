@@ -52,6 +52,8 @@ func _on_cookie_jar_cookie_count_changed(new_value : float) -> void:
 	_update_state(new_value)
 	
 func _on_button_pressed() -> void:
+	if(current_state == State.DISABLED):
+		return
 	upgrade.buy()
 	queue_free()
 
