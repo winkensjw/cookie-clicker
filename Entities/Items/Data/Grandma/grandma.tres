@@ -1,14 +1,19 @@
-[gd_resource type="Resource" script_class="ShopItemResource" load_steps=3 format=3 uid="uid://bnk1yhxsryctn"]
+[gd_resource type="Resource" script_class="ShopItemResource" load_steps=8 format=3 uid="uid://bnk1yhxsryctn"]
 
 [ext_resource type="Texture2D" uid="uid://bq4vlmcfi4vjo" path="res://Entities/Items/Art/Grandma/Grandma.png" id="1_urk30"]
+[ext_resource type="Script" path="res://Entities/Items/Upgrades/Data/shop_item_upgrade_resource.gd" id="2_0yq8v"]
 [ext_resource type="Script" path="res://Entities/Items/Data/shop_item_resource.gd" id="2_dicoy"]
+[ext_resource type="Resource" uid="uid://bgh8kgvbd1a06" path="res://Entities/Items/Upgrades/Data/Grandma/upgrade_1.tres" id="3_7v7ii"]
+[ext_resource type="Resource" uid="uid://0bnc00wnev8p" path="res://Entities/Items/Upgrades/Data/Grandma/upgrade_2.tres" id="4_5eg72"]
+[ext_resource type="Resource" uid="uid://dhlknqun8cxw6" path="res://Entities/Items/Upgrades/Data/Grandma/upgrade_3.tres" id="5_q7m5j"]
+[ext_resource type="Resource" uid="uid://di1nsrxdamihq" path="res://Entities/Items/Upgrades/Data/Grandma/upgrade_4.tres" id="6_p31yu"]
 
 [resource]
 script = ExtResource("2_dicoy")
 item_id = "1d157ae9-ca6b-418d-b433-cd89878cf369"
-item_order = 0
 item_name = "Grandma"
 icon_texture = ExtResource("1_urk30")
 initial_cost = 100
 base_cookies_per_second = 1.0
 cost_increase_percent = 15.0
+item_upgrades = Array[ExtResource("2_0yq8v")]([ExtResource("3_7v7ii"), ExtResource("4_5eg72"), ExtResource("5_q7m5j"), ExtResource("6_p31yu")])

@@ -11,6 +11,7 @@ var icon_texture : Texture2D
 var initial_cost : int
 var base_cookies_per_second : float
 var cost_increase_percent : float
+var item_upgrades : Array[ShopItemUpgrade]
 
 var cost : float
 var count : int
@@ -24,6 +25,7 @@ static func create(resource : ShopItemResource) -> ShopItem:
 	instance.initial_cost = resource.initial_cost
 	instance.base_cookies_per_second = resource.base_cookies_per_second
 	instance.cost_increase_percent = resource.cost_increase_percent
+	instance.item_upgrades = ShopItemUpgrade.create_all(resource.item_upgrades)
 	instance.update_count(0)
 	return instance
 

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ShopItemUpgradeResource" load_steps=3 format=3 uid="uid://0bnc00wnev8p"]
+
+[ext_resource type="Texture2D" uid="uid://buv0fxk3t13gf" path="res://Entities/Items/Upgrades/Art/rolling_pin.png" id="1_e5idb"]
+[ext_resource type="Script" path="res://Entities/Items/Upgrades/Data/shop_item_upgrade_resource.gd" id="2_4j7c7"]
+
+[resource]
+script = ExtResource("2_4j7c7")
+upgrade_id = "957b9eb9-1476-4e49-becd-05d55519e98c"
+upgrade_name = "Steel-plated rolling pins "
+icon_texture = ExtResource("1_e5idb")
+count_required = 5
+cost = 5000
+cookies_per_click_flat_added = 0.0
+cookies_per_second_multiplier_added = 1.0

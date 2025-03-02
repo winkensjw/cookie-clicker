@@ -17,6 +17,7 @@ var multiplier: float = 1.0
 func _ready() -> void:
 	Events.cookie_clicked.connect(_on_cookie_clicked)
 	Events.item_bought.connect(_on_item_bought)
+	Events.upgrade_bought.connect(_on_upgrade_bought)
 	
 func _process(delta: float) -> void:
 	_apply_cookies_per_second(delta)
@@ -46,18 +47,27 @@ func _on_item_bought(cost : float) -> void:
 	set_cookie_count(cookie_count - cost)
 	_recompute_cookies_per_second()
 
+func _on_upgrade_bought(cost : float) -> void:
+	set_cookie_count(cookie_count - cost)
+	_recompute_cookies_per_second()
+
 func _recompute_cookies_per_second() -> void:
 	var result : float = 0.0
 	for shop_item_id : String in shop_items:
 		var shop_item : ShopItem = shop_items.get(shop_item_id)
-		result += shop_item.base_cookies_per_second * shop_item.count
+		var flat_cookies_added : float = 0.0
+		var mulitplier_added : float = 1.0
+		for upgrade_item : ShopItemUpgrade in shop_item.item_upgrades:
+			if upgrade_item.bought:
+				flat_cookies_added += upgrade_item.cookies_per_click_flat_added
+				mulitplier_added += upgrade_item.cookies_per_second_multiplier_added
+		result += (shop_item.base_cookies_per_second * shop_item.count * mulitplier_added) + flat_cookies_added
 	set_cookies_per_second(result * multiplier)
 
 func set_cookies_per_second(new_value : float) -> void:
 	cookies_per_second = new_value
 	Events.cookie_jar_cookies_per_second_changed.emit(cookies_per_second)
 	
-
 ######################
 # Savind and Loading #
 ######################
@@ -78,8 +88,8 @@ func load_data() -> void:
 	cookie_count = data.get("cookie_count",0.0)
 	last_save_unix_time = data.get("last_save_unix_time",0.0)
 	_load_shop_items(data)
-	_update_cookies_on_resume()
 	_recompute_cookies_per_second()
+	_update_cookies_on_resume()
 
 func _load_shop_items(data : Dictionary) -> void:
 	var shop_item_save_data : Dictionary = data.get("shop_items", {})
@@ -94,8 +104,15 @@ func _load_shop_item(shop_item_resource : ShopItemResource, data : Dictionary) -
 	var shop_item : ShopItem = ShopItem.create(shop_item_resource)
 	var shop_item_save_data : Dictionary = data.get(shop_item.item_id, {})
 	shop_item.update_count(shop_item_save_data.get("count", shop_item.count))
+	_load_shop_item_upgrades(shop_item, shop_item_save_data)
 	return shop_item
 
+func _load_shop_item_upgrades(shop_item : ShopItem, data : Dictionary) -> void:
+	var upgrade_datas : Dictionary = data.get("item_upgrades", {})
+	for upgrade : ShopItemUpgrade in shop_item.item_upgrades:
+		var upgrade_data : Dictionary = upgrade_datas.get(upgrade.upgrade_id, {})
+		upgrade.bought = upgrade_data.get("bought", false)
+	
 func _save_shop_items() -> Dictionary:
 	var data : Dictionary = {}
 	for shop_item_id : String in shop_items:
@@ -106,5 +123,18 @@ func _save_shop_items() -> Dictionary:
 
 func _save_shop_item(shop_item : ShopItem) -> Dictionary:
 	return {
-		"count": shop_item.count
+		"count": shop_item.count,
+		"item_upgrades": _save_shop_item_upgrades(shop_item)
+	}
+
+func _save_shop_item_upgrades(shop_item : ShopItem) -> Dictionary:
+	var data : Dictionary = {}
+	for shop_item_upgrade : ShopItemUpgrade in shop_item.item_upgrades:
+		var shop_item_upgrade_data : Dictionary = _save_shop_item_upgrade(shop_item_upgrade)
+		data[shop_item_upgrade.upgrade_id] = shop_item_upgrade_data
+	return data
+
+func _save_shop_item_upgrade(shop_item_upgrade : ShopItemUpgrade) -> Dictionary:
+	return {
+		"bought": shop_item_upgrade.bought
 	}

@@ -25,3 +25,4 @@ signal shop_item_clicked(item : ShopItem)
 
 # Shop Item
 signal item_bought(cost : float)
+signal upgrade_bought(cost : float)

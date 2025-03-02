@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://buv0fxk3t13gf"
-path="res://.godot/imported/rolling_pin.png-01503ac2f1c71f8adbbdc5750ced7aad.ctex"
+path="res://.godot/imported/rolling_pin.png-312da1a9dfcefaf2ec4a6507c52da447.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/UI/ShopPanel/UpgradeItemPanel/Art/rolling_pin.png"
-dest_files=["res://.godot/imported/rolling_pin.png-01503ac2f1c71f8adbbdc5750ced7aad.ctex"]
+source_file="res://Entities/Items/Upgrades/Art/rolling_pin.png"
+dest_files=["res://.godot/imported/rolling_pin.png-312da1a9dfcefaf2ec4a6507c52da447.ctex"]
 
 [params]
 

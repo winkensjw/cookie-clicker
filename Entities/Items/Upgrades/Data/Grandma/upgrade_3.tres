@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ShopItemUpgradeResource" load_steps=3 format=3 uid="uid://dhlknqun8cxw6"]
+
+[ext_resource type="Texture2D" uid="uid://buv0fxk3t13gf" path="res://Entities/Items/Upgrades/Art/rolling_pin.png" id="1_lhnk8"]
+[ext_resource type="Script" path="res://Entities/Items/Upgrades/Data/shop_item_upgrade_resource.gd" id="2_skgsk"]
+
+[resource]
+script = ExtResource("2_skgsk")
+upgrade_id = "427db7d2-73c4-4413-99ae-2d1c166deeaa"
+upgrade_name = "Lubricated dentures "
+icon_texture = ExtResource("1_lhnk8")
+count_required = 25
+cost = 50000
+cookies_per_click_flat_added = 0.0
+cookies_per_second_multiplier_added = 1.0
