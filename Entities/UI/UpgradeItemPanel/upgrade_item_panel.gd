@@ -5,6 +5,9 @@ const UPGRADE_ITEM_PANEL_SCENE : PackedScene = preload("uid://x0yj4jndodam")
 const ENABLED_COLOR : Color = Color8(22,201,0,255)
 const DISABLED_COLOR : Color = Color8(255,22,24,255)
 
+## FIXME tooltips are a bit broken because they are clipped by the surrounding scroll container
+## There should be some autoload tooltip support class, that can be handed a tooltip item and 
+## then renders the tooltip in a layer above everything else so it is never hidden
 @onready var tooltip : PanelContainer = $Tooltip
 @onready var name_label : Label = $Tooltip/VBoxContainer/NameLabel
 @onready var cost_label : Label = $Tooltip/VBoxContainer/CostLabel
