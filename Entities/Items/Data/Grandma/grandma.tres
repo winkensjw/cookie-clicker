@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ShopItemResource" load_steps=3 format=3 uid="uid://bnk1yhxsryctn"]
+
+[ext_resource type="Texture2D" uid="uid://bq4vlmcfi4vjo" path="res://Entities/Items/Art/Grandma/Grandma.png" id="1_urk30"]
+[ext_resource type="Script" path="res://Entities/Items/Data/shop_item_resource.gd" id="2_dicoy"]
+
+[resource]
+script = ExtResource("2_dicoy")
+item_id = "1d157ae9-ca6b-418d-b433-cd89878cf369"
+item_order = 0
+item_name = "Grandma"
+icon_texture = ExtResource("1_urk30")
+initial_cost = 100
+base_cookies_per_second = 1.0
+cost_increase_percent = 15.0

@@ -1,13 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://bnuiewi11o8ba"]
+[gd_scene load_steps=6 format=3 uid="uid://bnuiewi11o8ba"]
 
 [ext_resource type="StyleBox" uid="uid://dstnxm2dm80p7" path="res://Entities/UI/Styles/ui_border_style.tres" id="1_bh3kq"]
 [ext_resource type="Texture2D" uid="uid://bloq2ywk01u8x" path="res://Entities/UI/CookiePanel/Art/Cookie.png" id="1_ehloj"]
 [ext_resource type="Script" path="res://Entities/UI/CookiePanel/cookie_panel.gd" id="1_v6aw2"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nvwnf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_glgdl"]
+
 [node name="CookiePanel" type="PanelContainer"]
 custom_minimum_size = Vector2(426, 720)
 offset_right = 426.0
 offset_bottom = 720.0
+mouse_filter = 1
 theme_override_styles/panel = ExtResource("1_bh3kq")
 script = ExtResource("1_v6aw2")
 
@@ -40,13 +45,22 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 
-[node name="CookieButton" type="TextureButton" parent="CookiePanelVBox"]
-custom_minimum_size = Vector2(256, 256)
+[node name="CookieButtonContainer" type="PanelContainer" parent="CookiePanelVBox"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture_normal = ExtResource("1_ehloj")
-ignore_texture_size = true
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxEmpty_nvwnf")
+
+[node name="CookieTexture" type="TextureRect" parent="CookiePanelVBox/CookieButtonContainer"]
+custom_minimum_size = Vector2(416, 256)
+layout_mode = 2
+texture = ExtResource("1_ehloj")
+expand_mode = 1
 stretch_mode = 5
 
-[connection signal="pressed" from="CookiePanelVBox/CookieButton" to="." method="_on_cookie_button_pressed"]
+[node name="CookieButton" type="Button" parent="CookiePanelVBox/CookieButtonContainer"]
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_glgdl")
+flat = true
+
+[connection signal="pressed" from="CookiePanelVBox/CookieButtonContainer/CookieButton" to="." method="_on_cookie_button_pressed"]

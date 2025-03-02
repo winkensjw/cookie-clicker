@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ShopItemResource" load_steps=3 format=3 uid="uid://dic34mp70qgbv"]
 
-[ext_resource type="Texture2D" uid="uid://bnbco8kay8loe" path="res://Entities/UI/ShopPanel/ShopItemPanel/Art/Cursor.png" id="1_lxgbp"]
-[ext_resource type="Script" path="res://Entities/UI/ShopPanel/ShopItemPanel/Data/shop_item_resource.gd" id="1_vqeoj"]
+[ext_resource type="Texture2D" uid="uid://bnbco8kay8loe" path="res://Entities/Items/Art/Cursor/Cursor.png" id="1_lxgbp"]
+[ext_resource type="Script" path="res://Entities/UI/ShopPanel/ShopItemPanel/Data/shop_item_panel_resource.gd" id="1_vqeoj"]
 
 [resource]
 script = ExtResource("1_vqeoj")

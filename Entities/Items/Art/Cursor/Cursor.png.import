@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bq4vlmcfi4vjo"
-path="res://.godot/imported/Grandma.png-a1aa5a12798b5d2045ecd98e3abbf6c9.ctex"
+uid="uid://bnbco8kay8loe"
+path="res://.godot/imported/Cursor.png-5be05eb42c3a44a1b217888667997127.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/UI/ShopPanel/ShopItemPanel/Art/Grandma.png"
-dest_files=["res://.godot/imported/Grandma.png-a1aa5a12798b5d2045ecd98e3abbf6c9.ctex"]
+source_file="res://Entities/Items/Art/Cursor/Cursor.png"
+dest_files=["res://.godot/imported/Cursor.png-5be05eb42c3a44a1b217888667997127.ctex"]
 
 [params]
 

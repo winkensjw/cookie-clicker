@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ShopItemResource" load_steps=3 format=3 uid="uid://d0pf343wnuytw"]
+
+[ext_resource type="Texture2D" uid="uid://bnbco8kay8loe" path="res://Entities/Items/Art/Cursor/Cursor.png" id="1_6vsl7"]
+[ext_resource type="Script" path="res://Entities/Items/Data/shop_item_resource.gd" id="1_wtw62"]
+
+[resource]
+script = ExtResource("1_wtw62")
+item_id = "7f3af724-d2d3-4955-a7b0-957fefc84d58"
+item_order = 1
+item_name = "Cursor"
+icon_texture = ExtResource("1_6vsl7")
+initial_cost = 15
+base_cookies_per_second = 0.1
+cost_increase_percent = 15.0

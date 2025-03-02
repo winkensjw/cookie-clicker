@@ -5,18 +5,10 @@ extends PanelContainer
 
 
 func _ready() -> void:
-	Constants.UPGRADE_ITEM_RESOURCES.all(_insert_upgrade_item)
-	Constants.SHOP_ITEM_RESOURCES.all(_insert_shop_item)
+	Events.cookie_jar_item_added.connect(_on_cookie_jar_item_added)
 
-func _insert_upgrade_item(resource_path : String) -> bool:
-	var upgrade_item : UpgradeItemResource = load(resource_path)
-	if Globals.bought_upgrades.has(upgrade_item.upgrade_name):
-		Events.upgrade_bought.emit(upgrade_item.upgrade_name, upgrade_item.multiplier)
-		return false
-	upgrade_grid_container.add_child(UpgradeItemPanel.create(upgrade_item))
-	return true;
+func _on_cookie_jar_item_added(item : ShopItem) -> void:
+	_insert_shop_item(item)
 	
-func _insert_shop_item(resource_path : String) -> bool:
-	var shop_item : ShopItemResource = load(resource_path)
-	shop_item_container.add_child(ShopItemPanel.create(shop_item))
-	return true;
+func _insert_shop_item(item : ShopItem) -> void:
+	shop_item_container.add_child(ShopItemPanel.create(item))

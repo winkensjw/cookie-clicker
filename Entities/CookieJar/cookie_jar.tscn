@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" path="res://Entities/CookieJar/cookie_jar.gd" id="1_spt6r"]
 
-[node name="CookieJar" type="Node"]
+[node name="CookieJar" type="Node" groups=["persistable"]]
 script = ExtResource("1_spt6r")

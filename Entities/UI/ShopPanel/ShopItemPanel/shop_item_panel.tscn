@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cki7cb05syyuq"]
+[gd_scene load_steps=7 format=3 uid="uid://cki7cb05syyuq"]
 
 [ext_resource type="Script" path="res://Entities/UI/ShopPanel/ShopItemPanel/shop_item_panel.gd" id="1_xy0yr"]
 [ext_resource type="Texture2D" uid="uid://bloq2ywk01u8x" path="res://Entities/UI/CookiePanel/Art/Cookie.png" id="2_oujjp"]
@@ -21,6 +21,8 @@ shadow_color = Color(0, 0, 0, 0.313726)
 font_size = 32
 shadow_size = 5
 shadow_color = Color(0, 0, 0, 0.313726)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i344f"]
 
 [node name="ShopItemPanel" type="PanelContainer"]
 custom_minimum_size = Vector2(328, 64)
@@ -83,6 +85,7 @@ size_flags_stretch_ratio = 0.2
 
 [node name="ShopItemPanelButton" type="Button" parent="."]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_i344f")
 flat = true
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]

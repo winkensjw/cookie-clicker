@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ShopItemResource" load_steps=3 format=3 uid="uid://kp6n80ipo0ch"]
 
-[ext_resource type="Texture2D" uid="uid://bq4vlmcfi4vjo" path="res://Entities/UI/ShopPanel/ShopItemPanel/Art/Grandma.png" id="1_rtc8y"]
-[ext_resource type="Script" path="res://Entities/UI/ShopPanel/ShopItemPanel/Data/shop_item_resource.gd" id="1_tgabc"]
+[ext_resource type="Texture2D" uid="uid://bq4vlmcfi4vjo" path="res://Entities/Items/Art/Grandma/Grandma.png" id="1_rtc8y"]
+[ext_resource type="Script" path="res://Entities/UI/ShopPanel/ShopItemPanel/Data/shop_item_panel_resource.gd" id="1_tgabc"]
 
 [resource]
 script = ExtResource("1_tgabc")

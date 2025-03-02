@@ -41,10 +41,11 @@ func _init_upgrade_panel() -> void:
 	texture = base_resource.icon_texture
 	
 func _process(_delta: float) -> void:
-	if current_state == State.DISABLED and Globals.cookie_count >= cost:
-		_enable()
-	elif current_state == State.ENABLED and Globals.cookie_count < cost:
-		_disable()
+	pass
+#	if current_state == State.DISABLED and Globals.cookie_count >= cost:
+#		_enable()
+#	elif current_state == State.ENABLED and Globals.cookie_count < cost:
+#		_disable()
 
 func _enable() -> void:
 	current_state = State.ENABLED
@@ -58,7 +59,7 @@ func _on_button_pressed() -> void:
 	if current_state == State.DISABLED or is_updating:
 		return
 	is_updating = true
-	Globals.upgrade_bought(upgrade_name, multiplier)
+#	Globals.upgrade_bought(upgrade_name, multiplier)
 	is_updating = false
 	Events.upgrade_bought.emit()
 	queue_free()
