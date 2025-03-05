@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ceoibahaxdmrm"]
 
 [ext_resource type="PackedScene" uid="uid://dkulhmb4uavfj" path="res://Entities/CookieJar/cookie_jar.tscn" id="1_8cpaf"]
-[ext_resource type="Script" path="res://Entities/Game/game.gd" id="1_j58ld"]
+[ext_resource type="Script" uid="uid://bjao4gj5j4c36" path="res://Entities/Game/game.gd" id="1_j58ld"]
 [ext_resource type="PackedScene" uid="uid://b7ejmch6jrtk8" path="res://Entities/UI/ui.tscn" id="1_nkkf0"]
 
 [node name="Game" type="Node2D"]

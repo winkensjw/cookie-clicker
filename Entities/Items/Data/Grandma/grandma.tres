@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="ShopItemResource" load_steps=8 format=3 uid="uid://bnk1yhxsryctn"]
 
 [ext_resource type="Texture2D" uid="uid://bq4vlmcfi4vjo" path="res://Entities/Items/Art/Grandma/Grandma.png" id="1_urk30"]
-[ext_resource type="Script" path="res://Entities/Items/Upgrades/Data/shop_item_upgrade_resource.gd" id="2_0yq8v"]
-[ext_resource type="Script" path="res://Entities/Items/Data/shop_item_resource.gd" id="2_dicoy"]
+[ext_resource type="Script" uid="uid://8503em0vyvre" path="res://Entities/Items/Upgrades/Data/shop_item_upgrade_resource.gd" id="2_0yq8v"]
+[ext_resource type="Script" uid="uid://bccvbku00nc46" path="res://Entities/Items/Data/shop_item_resource.gd" id="2_dicoy"]
 [ext_resource type="Resource" uid="uid://bgh8kgvbd1a06" path="res://Entities/Items/Upgrades/Data/Grandma/upgrade_1.tres" id="3_7v7ii"]
 [ext_resource type="Resource" uid="uid://0bnc00wnev8p" path="res://Entities/Items/Upgrades/Data/Grandma/upgrade_2.tres" id="4_5eg72"]
 [ext_resource type="Resource" uid="uid://dhlknqun8cxw6" path="res://Entities/Items/Upgrades/Data/Grandma/upgrade_3.tres" id="5_q7m5j"]

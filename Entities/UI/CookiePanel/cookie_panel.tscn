@@ -2,7 +2,7 @@
 
 [ext_resource type="StyleBox" uid="uid://dstnxm2dm80p7" path="res://Entities/UI/Styles/ui_border_style.tres" id="1_bh3kq"]
 [ext_resource type="Texture2D" uid="uid://bloq2ywk01u8x" path="res://Entities/UI/CookiePanel/Art/Cookie.png" id="1_ehloj"]
-[ext_resource type="Script" path="res://Entities/UI/CookiePanel/cookie_panel.gd" id="1_v6aw2"]
+[ext_resource type="Script" uid="uid://n4bowy5e5pio" path="res://Entities/UI/CookiePanel/cookie_panel.gd" id="1_v6aw2"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nvwnf"]
 

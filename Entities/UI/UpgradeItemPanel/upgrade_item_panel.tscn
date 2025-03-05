@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://x0yj4jndodam"]
 
 [ext_resource type="Texture2D" uid="uid://bloq2ywk01u8x" path="res://Entities/UI/CookiePanel/Art/Cookie.png" id="1_yanbf"]
-[ext_resource type="Script" path="res://Entities/UI/UpgradeItemPanel/upgrade_item_panel.gd" id="2_5tfdu"]
+[ext_resource type="Script" uid="uid://bs03up5uf8gpp" path="res://Entities/UI/UpgradeItemPanel/upgrade_item_panel.gd" id="2_5tfdu"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1mvph"]
 

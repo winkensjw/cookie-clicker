@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ShopItemUpgradeResource" load_steps=3 format=3 uid="uid://di1nsrxdamihq"]
 
 [ext_resource type="Texture2D" uid="uid://buv0fxk3t13gf" path="res://Entities/Items/Upgrades/Art/rolling_pin.png" id="1_2aooo"]
-[ext_resource type="Script" path="res://Entities/Items/Upgrades/Data/shop_item_upgrade_resource.gd" id="2_4lwo3"]
+[ext_resource type="Script" uid="uid://8503em0vyvre" path="res://Entities/Items/Upgrades/Data/shop_item_upgrade_resource.gd" id="2_4lwo3"]
 
 [resource]
 script = ExtResource("2_4lwo3")

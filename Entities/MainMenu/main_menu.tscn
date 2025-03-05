@@ -1,12 +1,27 @@
 [gd_scene load_steps=7 format=3 uid="uid://bod60lceunai5"]
 
 [ext_resource type="Texture2D" uid="uid://b10r2ypb2j8x6" path="res://Entities/MainMenu/Art/cookie_clicker.png" id="1_mqalg"]
-[ext_resource type="Script" path="res://Entities/MainMenu/main_menu.gd" id="1_mse71"]
+[ext_resource type="Script" uid="uid://85ng7xa6yvrt" path="res://Entities/MainMenu/main_menu.gd" id="1_mse71"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_r2bp8"]
 font_size = 64
 outline_size = 8
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_qrw0h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_713bk"]
 resource_name = "text_blink"
@@ -25,25 +40,10 @@ tracks/0/keys = {
 "values": [true, false, true]
 }
 
-[sub_resource type="Animation" id="Animation_qrw0h"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Label:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_372j7"]
 _data = {
-"RESET": SubResource("Animation_qrw0h"),
-"text_blink": SubResource("Animation_713bk")
+&"RESET": SubResource("Animation_qrw0h"),
+&"text_blink": SubResource("Animation_713bk")
 }
 
 [node name="MainMenu" type="CanvasLayer"]

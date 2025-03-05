@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dkulhmb4uavfj"]
 
-[ext_resource type="Script" path="res://Entities/CookieJar/cookie_jar.gd" id="1_spt6r"]
+[ext_resource type="Script" uid="uid://bpd05r1785rg1" path="res://Entities/CookieJar/cookie_jar.gd" id="1_spt6r"]
 
 [node name="CookieJar" type="Node" groups=["persistable"]]
 script = ExtResource("1_spt6r")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d2r2ml7mj3ayh"]
 
-[ext_resource type="Script" path="res://Entities/Items/Upgrades/shop_item_upgrade.gd" id="1_8fqxp"]
+[ext_resource type="Script" uid="uid://ciqa48b5ye2eu" path="res://Entities/Items/Upgrades/shop_item_upgrade.gd" id="1_8fqxp"]
 
 [node name="ShopItemUpgrade" type="Node"]
 script = ExtResource("1_8fqxp")
